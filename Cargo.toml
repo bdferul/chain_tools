@@ -2,8 +2,8 @@
 name = "chain_tools"
 version = "0.1.0"
 edition = "2021"
-description = "A set of traits allowing for more a functional style of programming"
-licence = "MIT OR Apache-2.0"
+description = "A set of traits allowing for more a erganomic style of chain programming"
+license = "MIT OR Apache-2.0"
 documentation = "https://docs.rs/chain_tools"
 repository = "https://github.com/bdferul/chain_tools/"
 
