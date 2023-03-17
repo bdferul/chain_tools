@@ -3,7 +3,7 @@ pub trait FPrint {
     /// # Usage
     /// Can be used to print
     /// ```
-    /// # use bowel::*;
+    /// # use chain_tools::*;
     /// let h = ["Donald", "Tyler", "Noah"]
     ///     .get(1)
     ///     .unwrap()
@@ -27,7 +27,7 @@ pub trait FDebug {
     /// # Usage
     /// Can be used to print
     /// ```
-    /// # use bowel::*;
+    /// # use chain_tools::*;
     /// let h = (10..=99)
     ///     .step_by(7)
     ///     .collect::<Vec<i32>>()
