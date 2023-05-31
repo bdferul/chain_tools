@@ -7,6 +7,20 @@ pub trait Pipe {
     }
 }
 
+impl<T> Pipe for T {}
+
+pub trait XRay {
+    fn xray<F: FnOnce(&Self) -> Self>(self, f: F) -> Self;
+}
+
+impl<T> XRay for Option<T> {
+    fn xray<F: FnOnce(&Self) -> Self>(self, f: F) -> Self {
+        if let Ok(x) = self {
+            f(x)
+        }
+    }
+}
+
 pub trait FPrint {
     /// Prints itself using [std::fmt::Display]
     /// # Usage
