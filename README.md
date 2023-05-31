@@ -1,9 +1,14 @@
-Chain tools: The Way Rust Was Always Meant To Be
+Chain Tools: The Way Rust Was Always Meant To Be
 ================================================
 
-chain_tools is a library with the goal of turning every function into one long function chain. The inspiration comes from learning Haskell and finding myself frustated with the limitations of list comprehension.
-
-# A Not-So Brief Rant About List Comprehension
+chain_tools is a library with the goal of turning every function into one long function chain. The inspiration comes from learning Haskell and finding myself frustated with the limitations of list comprehension. 
+## Features
+- Traits
+- - Pipe: `.pipe` allows for functionality similar to Elixir's [pipe operator](https://elixirschool.com/en/lessons/basics/pipe_operator)
+- - Sniff: `.sniff` provides immutable access to a varaible without breaking the chain. For more like this, [the tap crate is pretty awesome](https://crates.io/crates/tap).
+- - Ternary: `.or` and `.or_else` are similar to Javascript's [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
+- - XRay/XRayErr: Placeholder traits for use until [result_option_inspect](https://github.com/rust-lang/rust/issues/91345) becomes stable
+## A Not-So Brief Rant About List Comprehension
 
 For those who may be unaware, list comprehension is meant to be a quick way to 
 define a new list based on some other list. In Python for example, you could 
