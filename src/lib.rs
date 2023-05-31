@@ -1,3 +1,12 @@
+pub trait Pipe {
+    fn pipe<O, F: FnOnce(Self) -> O>(self, f: F) -> O
+    where
+        Self: Sized,
+    {
+        f(self)
+    }
+}
+
 pub trait FPrint {
     /// Prints itself using [std::fmt::Display]
     /// # Usage
