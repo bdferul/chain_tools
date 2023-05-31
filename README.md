@@ -17,13 +17,13 @@ A feature being confusing is not a problem. After all, I love Rust, a language c
 
 With that established, let's come back to list comprehension. Rust doesn't have list comprehension. Rust doesn't need list comprehension. Rust has something better. When faced with the task of giving the developers an easy way to transform a list, Python and Haskell faced a problem. Their language was not designed around that kind of task. With Python, you can't even find the length of a list without wrapping it in some function (`len(list)`). Adding this kind of functionality would require a whole new syntax anyway. Haskell made the decision to write the entire language around list comprehension. I'll give them some credit, it does look very "mathy".
 
-When Rust was faced with this very same problem, there was no worry. A lot of the leg work had been done already. The iterator trait was already capable of being extended with `.filter()` and `.map()`. If you combine them together, you get the `.filter_map()` function, which does the exact same thing as list comprehension. The functionality is identical. Here is some Rust to demonstrate: `(0..10).filter_map(|x| (x % 2 == 0).then(|| x * x))`. You could also just use the two methods separately with `(0..10).filter(|x| x % 2 == 0).map(|x| x * x)`.
+When Rust was faced with this very same problem, a lot of the leg work had been done already. The iterator trait was already capable of being extended with the `.filter()` and `.map()` methods. If you combine them together, you get the `.filter_map()` function which does the exact same thing as list comprehension. The functionality is identical. Here is some Rust to demonstrate: `(0..10).filter_map(|x| (x % 2 == 0).then(|| x * x))`. You could also just use the two methods separately with `(0..10).filter(|x| x % 2 == 0).map(|x| x * x)`.
 
-What's the point then? I can see many saying they prefer the look of list comprehension compared to rusts filtering and mapping. I can't even say that they're wrong, look is subjective after all, but there are some truths to keep in mind. 
+What's the point then? I couild see many saying they prefer the look of list comprehension compared to rusts filtering and mapping. I can't even say that they're wrong, look is subjective after all, but there are some truths to keep in mind. 
 
 **Truth #1:** *List comprehension breaks the sequence.*
 
-Most programming languages operate with the following sequence: Top to bottom, left to right. List comprehension breaks this second sequence. You get the output first, then the definition, then the source, then the condition. ***This** is **This** from **This** when **This***. It might not seem like a big deal, but code can already be hard enough to read, and breaking the sequence will only make reading even harder.
+Most programming languages operate with the following sequence: Top to bottom, left to right. List comprehension breaks this second sequence. You get the output first, then the definition, then the source, then the condition. ***This*** is ***This*** from ***This*** when ***This***. It might not seem like a big deal, but code can already be hard enough to read, and breaking the sequence will only make reading even harder.
 
 **Truth #2:** *List comprehension is inflexible.*
 
