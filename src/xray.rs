@@ -1,3 +1,4 @@
+/// A placeholder trait intended for depreciation once [result_option_inspect](https://github.com/rust-lang/rust/issues/91345) becomes stable
 pub trait XRay {
     type Item;
     fn xray<F: FnOnce(&Self::Item)>(self, f: F) -> Self;

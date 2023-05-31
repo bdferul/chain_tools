@@ -1,11 +1,13 @@
 [package]
 name = "chain_tools"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 description = "A set of traits allowing for more a erganomic style of chain programming"
 license = "MIT OR Apache-2.0"
 documentation = "https://docs.rs/chain_tools"
 repository = "https://github.com/bdferul/chain_tools/"
+keywords = ["no_std", "no-std", "chain", "utility"]
+catagories = ["rust-patterns"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
