@@ -1,7 +1,7 @@
 Chain tools: The Way Rust Was Always Meant To Be
 ================================================
 
-chain_tools is a library with the goal of turning every function into one long function chain. The inspiration comes from learning Haskell and finding myself frustated with the limitations of list comprehensions.
+chain_tools is a library with the goal of turning every function into one long function chain. The inspiration comes from learning Haskell and finding myself frustated with the limitations of list comprehension.
 
 # A Not-So Brief Rant About List Comprehension
 
